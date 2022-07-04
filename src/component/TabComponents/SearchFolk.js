@@ -32,7 +32,7 @@ function SearchFolk()
                     
                     className="back"
                     aria-label="Search"
-                    style={{width:'75%',height:'50px',borderRadius:'30px',backgroundColor:'#ffffff00'}}
+                    style={{width:'81%',height:'50px',borderRadius:'30px',backgroundColor:'#ffffff00'}}
                     />
                     {/* <Button variant="outline-success">Search</Button> */}
                     <span style={{fontSize:'30px',marginLeft:'-70px',fontWeight:'none',color:'gray'}}> <FontAwesomeIcon icon={faSearch} /></span>
