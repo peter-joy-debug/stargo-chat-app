@@ -11,8 +11,18 @@ import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle, faMessage, faSearch, faUserPlus, faUsersViewfinder, faVideoCamera} from "@fortawesome/free-solid-svg-icons";
 import { faTwitter,faFacebook,faInstagram,faYoutube,faPinterest} from "@fortawesome/free-brands-svg-icons";
-function FolkCard()
+import { useSelector} from "react-redux";
+import { useState } from 'react';
+
+
+const FolkCard = () =>
 {
+
+
+
+
+    const [key, setKey] = useState('personal');
+
     const renderTooltipVideo = (props) => (
         <Tooltip id="button-tooltip" {...props}>
           Video Call
@@ -37,13 +47,15 @@ function FolkCard()
       );
 return(
 <>
-<Card style={{ width: '73%',padding:'5px' }} className='back-two'>
+<Card style={{ width: '75%',padding:'1px' }} className='back-two'>
     <Container>
         <Row>
-            <Col sm={2}><Card.Img variant="top" src={User} style={{height:'50px',width:'50px'}}/></Col>
+            <Col sm={2}><Card.Img variant="top" src={User} style={{height:'50px',width:'50px',marginTop:'-15px',borderRadius:'30px'}} className="back-two"/>
+            <p style={{padding:'2%',backgroundColor:'green',width:'20%',height:'12px',borderRadius:'100px',marginLeft:'42px',marginTop:'-9px'}} className='back'></p>
+            </Col>
             <Col sm={7}>
-                <Card.Text>Peter Joy</Card.Text>
-                <span>joyndayishimiye@gmail.com</span>
+                <Card.Text>Honore Ndayishimiye</Card.Text>
+                <span>ndayishimiyehonore777@gmail</span>
             </Col>
             <Col sm={3}>
             <ButtonGroup aria-label="First group" className='back-two'>
@@ -52,7 +64,8 @@ return(
                 delay={{ show: 250, hide: 400 }}
                 overlay={renderTooltipAdd}
                 >
-                <Button variant="secondary"><FontAwesomeIcon icon={faUserPlus}/> </Button>
+                {/* <FollowBtn key={userId} user={usert}/> */}
+                <Button variant="info"><FontAwesomeIcon icon={faUserPlus}/> </Button>
                 </OverlayTrigger>
                 {' '}
                 <OverlayTrigger
@@ -60,7 +73,7 @@ return(
                 delay={{ show: 250, hide: 400 }}
                 overlay={renderTooltipView}
                 >
-                <Button variant="secondary"><FontAwesomeIcon icon={faInfoCircle}/> </Button>
+                <Button variant="info"><FontAwesomeIcon icon={faInfoCircle}/> </Button>
                 </OverlayTrigger>
                 {' '}
                 <OverlayTrigger
@@ -68,7 +81,7 @@ return(
                 delay={{ show: 250, hide: 400 }}
                 overlay={renderTooltipMessage}
                 >
-                <Button variant="secondary"><FontAwesomeIcon icon={faMessage}/> </Button>
+                <Button variant="info"><FontAwesomeIcon icon={faMessage}/> </Button>
                 </OverlayTrigger>
                 {' '}
                 <OverlayTrigger
@@ -76,13 +89,14 @@ return(
                 delay={{ show: 250, hide: 400 }}
                 overlay={renderTooltipVideo}
                 >
-                <Button variant="secondary"><FontAwesomeIcon icon={faVideoCamera}/> </Button>
+                <Button variant="info"><FontAwesomeIcon icon={faVideoCamera}/> </Button>
                 </OverlayTrigger>
             </ButtonGroup>
             </Col>
         </Row>
     </Container> 
 </Card>
+<br></br>
 </>
 );
 

@@ -80,6 +80,78 @@
 .back-two Button
 {
   background-color: rgb(11, 127, 236);
-  /* color:rgba(73, 73, 73, 0.671); */
+  /* color:rgba(9, 112, 197, 0.514); */
 }
+
+.srollMessage::-webkit-scrollbar {
+  width: 7px;
+  height: 10px;
+}
+/* Track */
+.srollMessage::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+.srollMessage::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+.srollMessage::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+
+
+body::-webkit-scrollbar {
+  width: 7px;
+  height: 10px;
+}
+/* Track */
+body::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: rgb(11, 127, 236); 
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+
+
+
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(11, 127, 236); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.front .front-data
+{
+    z-index: -1!important;
+    position: relative;
+}
+
 

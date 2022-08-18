@@ -1,9 +1,15 @@
+import { faBell } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Badge, Button } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-function LeftNavbar() {
+
+const LeftNavbar = () => {
+
+  
   return (
     <Navbar collapseOnSelect expand="lg" style={{backgroundColor:'#1a1c1fdc'}} variant="dark">
       <Container>
@@ -14,14 +20,17 @@ function LeftNavbar() {
            
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">Key</Nav.Link>
-            <NavDropdown title="Peter Joy" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.2">
-                Profile
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Setting</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
+            <Nav.Link href="#deets">
+          <span>
+              <FontAwesomeIcon icon={faBell}> <Badge bg="secondary">9</Badge>
+              <span className="visually-hidden">unread messages</span>
+            </FontAwesomeIcon>
+            </span>
+            </Nav.Link>
+            <NavDropdown title="Peter" id="collasible-nav-dropdown">
+           
+              {/* <NavDropdown.Divider /> */}
+              <NavDropdown.Item href='/'>
                 Logout
               </NavDropdown.Item>
             </NavDropdown>

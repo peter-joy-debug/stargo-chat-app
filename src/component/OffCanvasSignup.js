@@ -11,9 +11,18 @@ function OffCanvas() {
 
   return (
     <>
+        <p style={{padding:'2%',color:'black',fontStyle:'justified',textAlign:'justify'}} className='back-two'>
+        Hi, Welcome to Stargo Chat App. As we are testing this app, there is no need to create Account. What you need is to type an email within the form along with the password and navigate into the main app.
+      </p>
+      <br>
+
+</br>
       <Button variant="outline-dark" onClick={handleShow} className="back">
         Create Account
       </Button>
+      <br>
+
+      </br>
 
       <Offcanvas show={show} onHide={handleClose} placement='end'>
         <Offcanvas.Header closeButton>
